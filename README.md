@@ -4,7 +4,7 @@ by Ho Chun Wong [sc23hcw]
 
 [Github Page](https://github.com/hochunwong/COMP1921)
 
-# Menu thing
+# Table of Contents
 
 [Test Plan](testPlan.md)
 
@@ -12,4 +12,4 @@ by Ho Chun Wong [sc23hcw]
 
 [Skeleton Code](maze.c)
 
-[Test Data]()
+[Test Data](data)
