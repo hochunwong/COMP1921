@@ -1,6 +1,7 @@
 # COMP1921
 Programming Project thingy by Ho Chun Wong
 
+<a href="https://github.com/hochunwong/COMP1921">Github Page</a>
 
 # Menu thing
 
