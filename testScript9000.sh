@@ -4,7 +4,7 @@
 # ./maze square.csv < data/inputs/good.in > output.tmp 
 
 
-echo -e "\n\e[1m\e[36m\t~ maze program test script 9000 ~\n\e[0m]"
+echo -e "\n\e[1m\e[36m\t~ maze program test script 9000 ~\n\e[0m"
 
 
 echo -e "Argument Tests"
@@ -12,7 +12,7 @@ echo -e "Argument Tests"
 # Test no arguments
 echo -e -n "Testing no arguments . . . "
 ./maze > output.tmp
-if grep -q "Error" output.tmp;
+if grep -q "Usage: maze <mazeFile>" output.tmp;
 then
     echo -e "\e[32mPass :)\e[0m"
 else
@@ -22,7 +22,7 @@ fi
 # Test 2 arguments
 echo -e -n "Testing 2 arguments . . . "
 ./maze data/mazes/valid/rectangle.csv data/mazes/valid/square.csv > output.tmp
-if grep -q "Error" output.tmp;
+if grep -q "Usage: maze <mazeFile>" output.tmp;
 then
     echo -e "\e[32mPass :)\e[0m"
 else
@@ -32,7 +32,7 @@ fi
 # Test bad argument (missing file)
 echo -e -n "Testing 2 arguments . . . "
 ./maze thisFileDoesNOTexist.csv > output.tmp
-if grep -q "Error" output.tmp;
+if grep -q "Error, file not found." output.tmp;
 then
     echo -e "\e[32mPass :)\e[0m"
 else
@@ -40,7 +40,7 @@ else
 fi
 
 
-echo -e "Maze Checking Tests"
+echo -e "\nMaze Checking Tests"
 
 # Test maze dimensions (width)
 
