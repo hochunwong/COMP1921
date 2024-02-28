@@ -46,6 +46,27 @@ echo -e "\nMaze Checking Tests"
 
 
 
+echo -e "Map Display and Player Movement Tests"
+
+# Test Map Print
+echo -e -n "Testing map display . . . "
+./maze data/mazes/valid/wasd-testing/wasd-tester.txt < data/inputs/WASD/map.in
+# 2 possibilities - X covers S or X does not cover S
+if [grep -q data/mazes/valid/wasd-testing/wasd-tester.txt output.tmp] || [grep -q data/mazes/valid/wasd-testing/correct-m-ifcoverS.txt output.tmp];
+then
+    echo -e "\e[32mPass :)\e[0m"
+else
+    echo -e "\e[31mFail ;(\e[0m"
+fi
+
+# Test W
+
+# Test A
+
+# Test S
+
+# Test D
+
 
 # DELETE ME LATER
 
