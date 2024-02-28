@@ -25,7 +25,4 @@
 - enter char out of selection
 - enter number
 - enter very long string
-
-# check map
-
-- press M
+- check if map opens

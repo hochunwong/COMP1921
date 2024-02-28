@@ -11,5 +11,5 @@ struct playerInfo {
 // Main
 
 int main() {
-    //hi
+    printf("Hello World!");
 };
