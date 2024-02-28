@@ -10,6 +10,6 @@ by Ho Chun Wong [sc23hcw]
 
 [Test Script](testScript9000.sh)
 
-[Skeleton Code](maze.c)
-
 [Test Data](data)
+
+[Skeleton Code](maze.c)
