@@ -15,15 +15,15 @@
 - walk normally
 - walk off the map
 - walk into wall
-- touch E
+- reach E
 - walk into negative tile
 
 # check input
 
+- no args
 - enter every char in selection
 - enter char out of selection
 - enter number
-- leave input empty
 - enter very long string
 
 # check map
