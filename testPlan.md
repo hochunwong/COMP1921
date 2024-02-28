@@ -1,9 +1,31 @@
 # test plan weeeeeee
 
-<img src="img.jpg" height="400">
+<img src="img.jpg" height="260">
+
 
 # check maize
 
-- 5 < width/height < 100
+- 5 <= width/height <= 100
 - every single row same length
 - every single col same length
+- only has allowed chars (#, ' ', S, E)
+
+# check player
+
+- walk normally
+- walk off the map
+- walk into wall
+- touch E
+- walk into negative tile
+
+# check input
+
+- enter every char in selection
+- enter char out of selection
+- enter number
+- leave input empty
+- enter very long string
+
+# check map
+
+- press M

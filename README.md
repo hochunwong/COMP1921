@@ -1,5 +1,6 @@
 # COMP1921
-Programming Project thingy by Ho Chun Wong
+Programming Project coursework 1
+by Ho Chun Wong [sc23hcw]
 
 [Github Page](https://github.com/hochunwong/COMP1921)
 
