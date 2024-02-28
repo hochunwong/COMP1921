@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# ~~~ assume maze arguments: ~~~
-# ./maze maze.csv <input.in>
+# assume maze arguments:
+# ./maze square.csv < data/inputs/good.in > output.tmp 
 
 
 echo -e "\n\e[1m\e[36m\t~ maze program test script 9000 ~\n"
@@ -12,6 +12,7 @@ echo -e "\n\e[1m\e[36m\t~ maze program test script 9000 ~\n"
 
 
 # DELETE ME LATER
+
 #    echo -n "Testing x - "
 #    ./maze > tmp
 #    if grep -q "x" tmp;
