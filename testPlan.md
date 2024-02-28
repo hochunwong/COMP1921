@@ -1,6 +1,6 @@
 # test plan weeeeeee
 
-![Alt text](img.jpg)
+<img src="img.jpg" height="400">
 
 # check maize
 
