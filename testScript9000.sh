@@ -200,6 +200,40 @@ fi
 
 ################################################################################
 
-# Test Invalid Input
+echo -e "\nPlayer-Maze interaction tests"
+
+# Test out of bounds and negative player positions
+echo -e -n "Testing out of bounds & negative player pos value . . . "
+./maze data/mazes/valid/square.txt < data/inputs/outOfMap-negative.in > output.tmp
+if grep -q "You can't walk off the map!" output.tmp;
+then
+    echo -e "\e[32mPass :)\e[0m"
+else
+    echo -e "\e[31mFail ;(\e[0m"
+fi
+
+# Test interaction with wall
+echo -e -n "Testing player-wall interactions . . . "
+./maze data/mazes/valid/square.txt < data/inputs/wall.in > output.tmp
+if grep -q "You can't walk into the wall!" output.tmp;
+then
+    echo -e "\e[32mPass :)\e[0m"
+else
+    echo -e "\e[31mFail ;(\e[0m"
+fi
+
+# Test internation with end
+echo -e -n "Testing player-end tile interaction . . . "
+./maze data/mazes/valid/square.txt < data/inputs/good.in > output.tmp
+if grep -q "Congrats! You beat the maze!" output.tmp;
+then
+    echo -e "\e[32mPass :)\e[0m"
+else
+    echo -e "\e[31mFail ;(\e[0m"
+fi
+
+
+
+
 
 rm -f output.tmp
