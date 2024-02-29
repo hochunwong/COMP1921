@@ -40,6 +40,16 @@ else
     echo -e "\e[31mFail ;(\e[0m"
 fi
 
+# Test no permissions
+echo -e -n "Testing no permissions . . . "
+./maze < data/mazes/invalid/noPerms.txt > output.tmp
+if grep -q "Usage: maze <mazeFile>" output.tmp;
+then
+    echo -e "\e[32mPass :)\e[0m"
+else
+    echo -e "\e[31mFail ;(\e[0m"
+fi
+
 ################################################################################
 
 echo -e "\nMaze Checking Tests"
@@ -189,5 +199,7 @@ else
 fi
 
 ################################################################################
+
+# Test Invalid Input
 
 rm -f output.tmp
