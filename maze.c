@@ -52,13 +52,13 @@ bool checkIsGameOver(struct player Player1, struct mazeStruct maze) {
 
     //else
     return false;
-}
+};
 
 
 void displayMap(struct player Player1, struct mazeStruct maze) {
     //Print map
     //If player on top of S, print X instead of S
-}
+};
 
 
 struct player movePlayer(struct player Player1, struct mazeStruct maze) {
@@ -76,7 +76,7 @@ struct player movePlayer(struct player Player1, struct mazeStruct maze) {
     
     //Update player position
     return Player1;
-}
+};
 
 
 
