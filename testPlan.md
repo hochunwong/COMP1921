@@ -12,6 +12,7 @@
 - every single row same length
 - every single col same length
 - only has allowed chars (#, ' ', S, E)
+- only has one start
 
 # check player
 - walk normally

@@ -4,7 +4,7 @@
 # ./maze square.csv < data/inputs/good.in > output.tmp 
 
 
-echo -e "\n\e[1m\e[36m\t~ Maze Program Test Script 9000 ~\n\e[0m"
+echo -e "\n\e[1m\e[36m\t~ Maze Program Test script 9000 ~\n\e[0m"
 
 ################################################################################
 
@@ -128,6 +128,16 @@ fi
 echo -e -n "Testing maze missing End . . . "
 ./maze data/mazes/invalid/noE.txt > output.tmp
 if grep -q "Error - Maze does not have End Point" output.tmp;
+then
+    echo -e "\e[32mPass :)\e[0m"
+else
+    echo -e "\e[31mFail ;(\e[0m"
+fi
+
+# Test multiple Start
+echo -e -n "Testing multiple Start tiles . . . "
+./maze data/mazes/invalid/manyStarts.txt > output.tmp
+if grep -q "Error - Maze has more than one Start Point" output.tmp;
 then
     echo -e "\e[32mPass :)\e[0m"
 else
