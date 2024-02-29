@@ -54,6 +54,26 @@ fi
 
 echo -e "\nMaze Checking Tests"
 
+# Check 5x5 Grid (min)
+echo -e -n "Testing min size . . . "
+./maze data/mazes/valid/5x5.txt > output.tmp
+if grep -q "Error - maze too small" output.tmp;
+then
+    echo -e "\e[31mFail ;(\e[0m"
+else
+    echo -e "\e[32mPass :)\e[0m"
+fi
+
+# Check 100x100 Grid (max)
+echo -e -n "Testing max size . . . "
+./maze data/mazes/valid/100x100.txt > output.tmp
+if grep -q "Error - maze too small" output.tmp;
+then
+    echo -e "\e[31mFail ;(\e[0m"
+else
+    echo -e "\e[32mPass :)\e[0m"
+fi
+
 # Too few rows
 echo -e -n "Testing too few rows . . . "
 ./maze data/mazes/invalid/tooFewRows.txt > output.tmp
