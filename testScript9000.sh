@@ -4,7 +4,7 @@
 # ./maze square.csv < data/inputs/good.in > output.tmp 
 
 
-echo -e "\n\e[1m\e[36m\t~ maze program test script 9000 ~\n\e[0m"
+echo -e "\n\e[1m\e[36m\t~ Maze Program Test Script 9000 ~\n\e[0m"
 
 ################################################################################
 
@@ -232,8 +232,9 @@ else
     echo -e "\e[31mFail ;(\e[0m"
 fi
 
+################################################################################
 
-
+echo -e -n "\n\e[1m\e[36mTesting Completed!\n\n\e[0m"
 
 
 rm -f output.tmp
