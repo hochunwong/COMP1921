@@ -23,6 +23,8 @@ struct mazeStruct {
 struct mazeStruct mazeLoader(char filename[256]) {
     int rowcount, colcount;
 
+    //Check if file can be opened, if not print error message and exit 1
+
     //Check width and height (5 <= x <= 100)
     //Check is rectangle (every row and col has same size)
     //Check contains only 1 of 'S' (and maybe 'E'?)
