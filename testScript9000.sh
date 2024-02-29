@@ -51,8 +51,7 @@ echo -e "Map Display and Player Movement Tests"
 # Test Map Print
 echo -e -n "Testing map display . . . "
 ./maze data/mazes/valid/wasd-testing/wasd-tester.txt < data/inputs/WASD/map.in > output.tmp
-# 2 possibilities - X covers S or X does not cover S
-if [grep -Fxvf data/mazes/valid/wasd-testing/wasd-tester.txt output.tmp] || [grep -Fxvf data/mazes/valid/wasd-testing/correct-m-ifcoverS.txt output.tmp];
+if grep cmp -s data/mazes/valid/wasd-testing/correct-m.txt output.tmp;
 then
     echo -e "\e[32mPass :)\e[0m"
 else
@@ -62,7 +61,7 @@ fi
 # Test W
 echo -e -n "Testing player movement (W) . . . "
 ./maze data/mazes/valid/wasd-testing/wasd-tester.txt < data/inputs/WASD/W.in > output.tmp
-if grep -Fxvf data/mazes/valid/wasd-testing/correct-w.txt output.tmp;
+if grep cmp -s data/mazes/valid/wasd-testing/correct-w.txt output.tmp;
 then
     echo -e "\e[32mPass :)\e[0m"
 else
@@ -72,7 +71,7 @@ fi
 # Test A
 echo -e -n "Testing player movement (A) . . . "
 ./maze data/mazes/valid/wasd-testing/wasd-tester.txt < data/inputs/WASD/A.in > output.tmp
-if grep -Fxvf data/mazes/valid/wasd-testing/correct-a.txt output.tmp;
+if grep cmp -s data/mazes/valid/wasd-testing/correct-a.txt output.tmp;
 then
     echo -e "\e[32mPass :)\e[0m"
 else
@@ -82,7 +81,7 @@ fi
 # Test S
 echo -e -n "Testing player movement (S) . . . "
 ./maze data/mazes/valid/wasd-testing/wasd-tester.txt < data/inputs/WASD/S.in > output.tmp
-if grep -Fxvf data/mazes/valid/wasd-testing/correct-s.txt output.tmp;
+if grep cmp -s data/mazes/valid/wasd-testing/correct-s.txt output.tmp;
 then
     echo -e "\e[32mPass :)\e[0m"
 else
@@ -92,10 +91,13 @@ fi
 # Test D
 echo -e -n "Testing player movement (D) . . . "
 ./maze data/mazes/valid/wasd-testing/wasd-tester.txt < data/inputs/WASD/D.in > output.tmp
-if grep -Fxvf data/mazes/valid/wasd-testing/correct-d.txt output.tmp;
+if grep cmp -s data/mazes/valid/wasd-testing/correct-d.txt output.tmp;
 then
     echo -e "\e[32mPass :)\e[0m"
 else
     echo -e "\e[31mFail ;(\e[0m"
 fi
+
+
+
 rm -f output.tmp
