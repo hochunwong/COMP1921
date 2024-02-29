@@ -47,7 +47,7 @@ echo -e "\nMaze Checking Tests"
 # Too few rows
 echo -e -n "Testing too few rows . . . "
 ./maze data/mazes/invalid/tooFewRows.txt > output.tmp
-if grep -q "Error - maze too small";
+if grep -q "Error - maze too small" output.tmp;
 then
     echo -e "\e[32mPass :)\e[0m"
 else
@@ -57,7 +57,7 @@ fi
 # Too few cols
 echo -e -n "Testing too few cols . . . "
 ./maze data/mazes/invalid/tooFewCols.txt > output.tmp
-if grep -q "Error - maze too small";
+if grep -q "Error - maze too small" output.tmp;
 then
     echo -e "\e[32mPass :)\e[0m"
 else
@@ -67,7 +67,7 @@ fi
 # Too many rows
 echo -e -n "Testing too many rows . . . "
 ./maze data/mazes/invalid/tooManyRows.txt > output.tmp
-if grep -q "Error - maze too big";
+if grep -q "Error - maze too big" output.tmp;
 then
     echo -e "\e[32mPass :)\e[0m"
 else
@@ -77,7 +77,7 @@ fi
 # Too many cols
 echo -e -n "Testing too many cols . . . "
 ./maze data/mazes/invalid/tooManyCols.txt > output.tmp
-if grep -q "Error - maze too big";
+if grep -q "Error - maze too big" output.tmp;
 then
     echo -e "\e[32mPass :)\e[0m"
 else
@@ -87,7 +87,7 @@ fi
 # Test rectangle check
 echo -e -n "Testing non-rectangular maze . . . "
 ./maze data/mazes/invalid/notRectangle.txt > output.tmp
-if grep -q "Error - Maze not rectangle";
+if grep -q "Error - Maze not rectangle" output.tmp;
 then
     echo -e "\e[32mPass :)\e[0m"
 else
@@ -97,7 +97,7 @@ fi
 # Test allowed chars check
 echo -e -n "Testing maze with illegals . . . "
 ./maze data/mazes/invalid/invalChars.txt > output.tmp
-if grep -q "Error - Maze contains invalid characters";
+if grep -q "Error - Maze contains invalid characters" output.tmp;
 then
     echo -e "\e[32mPass :)\e[0m"
 else
@@ -107,7 +107,7 @@ fi
 # Test missing Start
 echo -e -n "Testing maze missing Start . . . "
 ./maze data/mazes/invalid/noS.txt > output.tmp
-if grep -q "Error - Maze does not have Start Point";
+if grep -q "Error - Maze does not have Start Point" output.tmp;
 then
     echo -e "\e[32mPass :)\e[0m"
 else
@@ -117,7 +117,7 @@ fi
 # Test missing End
 echo -e -n "Testing maze missing End . . . "
 ./maze data/mazes/invalid/noE.txt > output.tmp
-if grep -q "Error - Maze does not have End Point";
+if grep -q "Error - Maze does not have End Point" output.tmp;
 then
     echo -e "\e[32mPass :)\e[0m"
 else
@@ -126,7 +126,7 @@ fi
 
 ################################################################################
 
-echo -e "Map Display and Player Movement Tests"
+echo -e "\nMap Display and Player Movement Tests"
 
 # Test Map Print
 echo -e -n "Testing map display . . . "
@@ -172,6 +172,16 @@ fi
 echo -e -n "Testing player movement (D) . . . "
 ./maze data/mazes/valid/wasd-testing/wasd-tester.txt < data/inputs/WASD/D.in > output.tmp
 if cmp -s data/mazes/valid/wasd-testing/correct-d.txt output.tmp;
+then
+    echo -e "\e[32mPass :)\e[0m"
+else
+    echo -e "\e[31mFail ;(\e[0m"
+fi
+
+# Test Invalid Input
+echo -e -n "Testing invalid input . . . "
+./maze data/mazes/valid/wasd-testing/wasd-tester.txt < data/inputs/invalid.in > output.tmp
+if grep -q "Error - Input contains invalid characters" output.tmp;
 then
     echo -e "\e[32mPass :)\e[0m"
 else
